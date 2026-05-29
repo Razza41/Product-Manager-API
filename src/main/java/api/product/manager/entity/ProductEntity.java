@@ -14,8 +14,10 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Table(name = "produtos")
+@Builder
 public class ProductEntity {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -23,7 +25,6 @@ public class ProductEntity {
     @Column(nullable = false, unique = true) //unique faz com que o nome nao possa ser repetido
     private String name;
 
-    @NotNull
     private String description;
 
     @NotNull
