@@ -35,10 +35,8 @@ public class ProductEntity {
     private Integer stock;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)
+    @JoinColumn(name = "category_id", nullable = false) //insere o id na tabela de produtos
     private CategoryEntity category_id;
-
-
 
 
 }
