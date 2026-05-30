@@ -7,9 +7,11 @@ import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 
 import java.math.BigDecimal;
 
+@Builder
 public record ProductDTO(
 
         @NotNull
