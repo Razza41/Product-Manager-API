@@ -39,7 +39,7 @@ public class ProductService {
         }
     }
 
-    public List<ProductEntity> findAllProducts(){ //get-todos
+    public List<ProductEntity> findAllProducts(){//get-todos
         return productRepository.findAll();
     }
 
