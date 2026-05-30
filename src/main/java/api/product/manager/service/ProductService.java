@@ -25,5 +25,16 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    public void removeProduct(Long id){
+
+        if(!productRepository.existsById(id)){ //verifica se o produto existe
+            throw new RuntimeException("Informe um produto existente!");
+        }
+        else{
+            productRepository.deleteById(id);
+        }
+
+    }
+
 
 }
